@@ -4,52 +4,53 @@ import likes from "../images/likes.svg";
 import { Link, useNavigate } from "react-router-dom";
 
 function MainLayout({ children }) {
-  const navigation = useNavigate();
+  const navigate = useNavigate(); // navigation => navigate
   function handleHome() {
-    navigation("/");
+    navigate("/"); // navigation => navigate
   }
+
   return (
     <div className="flex h-[100vh]">
       <aside className="w-[310px] bg-[#000000] text-white h-[100vh] py-[25px] px-[23px]">
         <div>
           <div className="flex items-center gap-6 mt-8 cursor-pointer">
             <button onClick={handleHome}>
-              <i class="fa-sharp fa-solid fa-house text-gray-400 text-2xl"></i>
+              <i className="fa-sharp fa-solid fa-house text-gray-400 text-2xl"></i>
             </button>
             <Link to={"/"} className="text-gray-400 font-medium">
               Home
             </Link>
           </div>
-          <div className="flex items-center gap-6  mt-3 cursor-pointer">
+          <div className="flex items-center gap-6 mt-3 cursor-pointer">
             <button>
-              <i class="fa-solid fa-magnifying-glass text-gray-400 text-2xl"></i>
+              <i className="fa-solid fa-magnifying-glass text-gray-400 text-2xl"></i>
             </button>
             <Link className="text-gray-400 font-medium">Search</Link>
           </div>
-          <div className="flex items-center gap-6  mt-3 cursor-pointer">
+          <div className="flex items-center gap-6 mt-3 cursor-pointer">
             <button>
-              <i class="fa-solid fa-book text-gray-400 text-2xl"></i>
+              <i className="fa-solid fa-book text-gray-400 text-2xl"></i>
             </button>
             <Link className="text-gray-400 font-medium">Your Library</Link>
           </div>
-          <div className="flex items-center gap-6  mt-12 cursor-pointer">
+          <div className="flex items-center gap-6 mt-12 cursor-pointer">
             <button>
-              <i class="fa-solid fa-square-plus text-2xl text-gray-400"></i>
+              <i className="fa-solid fa-square-plus text-2xl text-gray-400"></i>
             </button>
             <Link className="text-gray-400 font-medium">Create Playlist</Link>
           </div>
-          <div className="flex items-center gap-6  mt-3 cursor-pointer">
-            <button>
+          <div className="flex items-center gap-6 mt-3 cursor-pointer">
+            <Link to={"/likes"}>
               <img src={likes} alt="likes image" className="w-[20px]" />
-            </button>
-            <Link to={"/likes"} className=" font-medium">
+            </Link>
+            <Link to={"/likes"} className="font-medium">
               Liked Songs
             </Link>
           </div>
         </div>
       </aside>
       <main className="flex-grow relative">{children}</main>
-      <aside className="w-[310px] bg-[#000000] text-white h-[100vh]  py-[30px] px-[20px]">
+      <aside className="w-[310px] bg-[#000000] text-white h-[100vh] py-[30px] px-[20px]">
         <div className="flex justify-between">
           <div>
             <h2 className="text-gray-400 text-[15px] font-bold tracking-[0.01em] cursor-pointer">
@@ -66,35 +67,35 @@ function MainLayout({ children }) {
           </div>
         </div>
         <div className="mt-[40px]">
-          <p className="text-[#CCCCCC] mb-[25px] font-[450] leading-[24px] text-left  decoration-skip-ink-none">
+          <p className="text-[#CCCCCC] mb-[25px] font-[450] leading-[24px] text-left decoration-skip-ink-none">
             Let friends and followers on Spotify see what you’re listening to.
           </p>
         </div>
         <div>
           <img
             src={user}
-            alt="user inmage"
+            alt="user image"
             className="w-[150px] cursor-pointer mb-[20px]"
           />
           <img
             src={user}
-            alt="user inmage"
+            alt="user image"
             className="w-[150px] cursor-pointer mb-[20px]"
           />
           <img
             src={user}
-            alt="user inmage"
+            alt="user image"
             className="w-[150px] cursor-pointer mb-[20px]"
           />
         </div>
         <div>
           <p className="text-[#CCCCCC] mb-[25px]">
             Go to Settings Social and enable “Share my listening activity on
-            Spotify.’ You can turn this off at any time.
+            Spotify.” You can turn this off at any time.
           </p>
         </div>
         <div className="text-center">
-          <button className="hover:bg-gray-300 bg-white text-[#171717] text-center items-center py-[12px] text-xl font-medium px-[65px] rounded-3xl">
+          <button className="hover:bg-gray-300 bg-white text-[#171717] text-center items-center py-[12px]  font-medium px-[65px] rounded-3xl">
             SETTINGS
           </button>
         </div>
