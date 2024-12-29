@@ -1,5 +1,6 @@
 import React from "react";
 import user from "../images/user.png";
+import likes from "../images/likes.svg";
 import { Link, useNavigate } from "react-router-dom";
 
 function MainLayout({ children }) {
@@ -24,6 +25,26 @@ function MainLayout({ children }) {
               <i class="fa-solid fa-magnifying-glass text-gray-400 text-2xl"></i>
             </button>
             <Link className="text-gray-400 font-medium">Search</Link>
+          </div>
+          <div className="flex items-center gap-6  mt-3 cursor-pointer">
+            <button>
+              <i class="fa-solid fa-book text-gray-400 text-2xl"></i>
+            </button>
+            <Link className="text-gray-400 font-medium">Your Library</Link>
+          </div>
+          <div className="flex items-center gap-6  mt-12 cursor-pointer">
+            <button>
+              <i class="fa-solid fa-square-plus text-2xl text-gray-400"></i>
+            </button>
+            <Link className="text-gray-400 font-medium">Create Playlist</Link>
+          </div>
+          <div className="flex items-center gap-6  mt-3 cursor-pointer">
+            <button>
+              <img src={likes} alt="likes image" className="w-[20px]" />
+            </button>
+            <Link to={"/likes"} className=" font-medium">
+              Liked Songs
+            </Link>
           </div>
         </div>
       </aside>
