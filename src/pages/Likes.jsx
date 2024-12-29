@@ -3,7 +3,7 @@ import React from "react";
 function Likes() {
   return (
     <div>
-      <h1>Likes</h1>
+      <h1>likes</h1>
     </div>
   );
 }

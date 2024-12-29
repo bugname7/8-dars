@@ -15,35 +15,51 @@ function MainLayout({ children }) {
         <div>
           <div className="flex items-center gap-6 mt-8 cursor-pointer">
             <button onClick={handleHome}>
-              <i className="fa-sharp fa-solid fa-house text-gray-400 text-2xl"></i>
+              <i className="fa-sharp fa-solid fa-house text-gray-400 text-2xl hover:text-white"></i>
             </button>
-            <Link to={"/"} className="text-gray-400 font-medium">
+            <Link
+              to={"/"}
+              className="text-gray-400 font-medium hover:text-white"
+            >
               Home
             </Link>
           </div>
           <div className="flex items-center gap-6 mt-3 cursor-pointer">
             <button>
-              <i className="fa-solid fa-magnifying-glass text-gray-400 text-2xl"></i>
+              <i className="fa-solid fa-magnifying-glass text-gray-400 text-2xl hover:text-white"></i>
             </button>
-            <Link className="text-gray-400 font-medium">Search</Link>
+            <Link className="text-gray-400 font-medium hover:text-white">
+              Search
+            </Link>
           </div>
           <div className="flex items-center gap-6 mt-3 cursor-pointer">
             <button>
-              <i className="fa-solid fa-book text-gray-400 text-2xl"></i>
+              <i className="fa-solid fa-book text-gray-400 text-2xl hover:text-white"></i>
             </button>
-            <Link className="text-gray-400 font-medium">Your Library</Link>
+            <Link className="text-gray-400 font-medium hover:text-white">
+              Your Library
+            </Link>
           </div>
           <div className="flex items-center gap-6 mt-12 cursor-pointer">
             <button>
-              <i className="fa-solid fa-square-plus text-2xl text-gray-400"></i>
+              <i className="fa-solid fa-square-plus text-2xl text-gray-400 hover:text-white"></i>
             </button>
-            <Link className="text-gray-400 font-medium">Create Playlist</Link>
+            <Link className="text-gray-400 font-medium hover:text-white">
+              Create Playlist
+            </Link>
           </div>
           <div className="flex items-center gap-6 mt-3 cursor-pointer">
             <Link to={"/likes"}>
-              <img src={likes} alt="likes image" className="w-[20px]" />
+              <img
+                src={likes}
+                alt="likes image"
+                className="w-[20px] hover:text-white"
+              />
             </Link>
-            <Link to={"/likes"} className="font-medium">
+            <Link
+              to={"/likes"}
+              className="font-medium text-gray-400 hover:text-white"
+            >
               Liked Songs
             </Link>
           </div>
@@ -75,17 +91,17 @@ function MainLayout({ children }) {
           <img
             src={user}
             alt="user image"
-            className="w-[150px] cursor-pointer mb-[20px]"
+            className="w-[130px] cursor-pointer mb-[20px]"
           />
           <img
             src={user}
             alt="user image"
-            className="w-[150px] cursor-pointer mb-[20px]"
+            className="w-[130px] cursor-pointer mb-[20px]"
           />
           <img
             src={user}
             alt="user image"
-            className="w-[150px] cursor-pointer mb-[20px]"
+            className="w-[130px] cursor-pointer mb-[20px]"
           />
         </div>
         <div>
