@@ -11,7 +11,7 @@ function MainLayout({ children }) {
 
   return (
     <div className="flex h-[100vh]">
-      <aside className="w-[310px] bg-[#000000] text-white h-[100vh] py-[25px] px-[23px]">
+      <aside className="w-[310px] bg-[#000000] text-white h-[150vh] py-[25px] px-[23px]">
         <div>
           <div className="flex items-center gap-6 mt-8 cursor-pointer">
             <button onClick={handleHome}>
@@ -66,7 +66,7 @@ function MainLayout({ children }) {
         </div>
       </aside>
       <main className="flex-grow relative">{children}</main>
-      <aside className="w-[310px] bg-[#000000] text-white h-[100vh] py-[30px] px-[20px]">
+      <aside className="w-[310px] bg-[#000000] text-white h-[150vh] py-[30px] px-[20px]">
         <div className="flex justify-between">
           <div>
             <h2 className="text-gray-400 text-[15px] font-bold tracking-[0.01em] cursor-pointer">
