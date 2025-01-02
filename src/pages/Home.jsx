@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import cover from "../images/cover.png";
 import forwardL from "../images/forwardL.svg";
 import forwardR from "../images/forwardR.svg";
-
 function Home() {
-  const [showAll, setShowAll] = useState(false);
+  const [seeAll, setSeeAll] = useState(false);
   const cards = [
     { id: 1, title: "Card 1", description: "Description 1" },
     { id: 2, title: "Card 2", description: "Description 2" },
@@ -16,7 +15,7 @@ function Home() {
     { id: 8, title: "Card 8", description: "Description 8" },
   ];
 
-  const visibleCards = showAll ? cards : cards.slice(0, 4);
+  const visibleCards = seeAll ? cards : cards.slice(0, 4);
 
   return (
     <div>
@@ -72,10 +71,10 @@ function Home() {
         <div className="flex justify-between">
           <h2 className="text-white text-xl font-medium">Your top mixes</h2>
           <p
-            onClick={() => setShowAll(!showAll)}
+            onClick={() => setSeeAll(!seeAll)}
             className="text-gray-300 hover:underline cursor-pointer"
           >
-            {showAll ? "Hide More" : "SEE ALL"}
+            {seeAll ? "Hide More" : "SEE ALL"}
           </p>
         </div>
         <div className="space-y-4">
