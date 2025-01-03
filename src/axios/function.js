@@ -14,9 +14,16 @@ const getToken = async () => {
 
     const auth = await response.json();
 
-    localStorage.setItem("token", `${auth.token_type} ${auth.access_token}`);
+    if (response.ok) {
+      localStorage.setItem(
+        "access_token",
+        `${auth.token_type} ${auth.access_token}`
+      );
+    } else {
+      console.error("Failed to fetch token:", auth);
+    }
   } catch (err) {
-    console.log(err);
+    console.error("Error:", err);
   }
 };
 
