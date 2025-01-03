@@ -4,14 +4,15 @@ import likes from "../images/likes.svg";
 import { Link, useNavigate } from "react-router-dom";
 
 function MainLayout({ children }) {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+
   function handleHome() {
     navigate("/");
   }
 
   return (
     <div className="flex h-[100vh]">
-      <aside className="w-[310px] bg-[#000000] text-white h-[150vh] py-[30px] px-[23px]">
+      <aside className="fixed left-0 top-0 w-[310px] bg-[#000000] text-white h-full py-[30px] px-[23px] flex-shrink-0">
         <div>
           <div className="flex items-center gap-6 mt-8 cursor-pointer">
             <button onClick={handleHome}>
@@ -65,8 +66,15 @@ function MainLayout({ children }) {
           </div>
         </div>
       </aside>
-      <main className="flex-grow relative">{children}</main>
-      <aside className="w-[310px] bg-[#000000] text-white h-[150vh] py-[30px] px-[23px]">
+
+      <main className="flex-grow relative ml-[310px] mr-[310px]">
+  <div className="overflow-auto h-full">
+    {children}
+  </div>
+</main>
+
+
+      <aside className="fixed right-0 top-0 w-[310px] bg-[#000000] text-white h-full py-[30px] px-[23px] flex-shrink-0">
         <div className="flex justify-between">
           <div>
             <h2 className="text-gray-400 text-[15px] font-bold tracking-[0.01em] cursor-pointer">
@@ -111,7 +119,7 @@ function MainLayout({ children }) {
           </p>
         </div>
         <div className="text-center">
-          <button className="hover:bg-gray-300 bg-white text-[#171717] text-center items-center py-[12px]  font-medium px-[65px] rounded-3xl">
+          <button className="hover:bg-gray-300 bg-white text-[#171717] text-center items-center py-[12px] font-medium px-[65px] rounded-3xl">
             SETTINGS
           </button>
         </div>
