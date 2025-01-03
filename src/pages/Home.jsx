@@ -71,49 +71,49 @@ function Home() {
 
   const cards1 = [
     {
-      id: 1,
+      id: 9,
       title: "Jazz Vibes",
       description: "Miles Davis, John Coltrane, and more",
       image: cover,
     },
     {
-      id: 2,
+      id: 10,
       title: "Rock Classics",
       description: "The Beatles, Queen, Pink Floyd and more",
       image: pop,
     },
     {
-      id: 3,
+      id: 11,
       title: "Electronic Beats",
       description: "Daft Punk, The Chemical Brothers, Justice and more",
       image: daily4,
     },
     {
-      id: 4,
+      id: 12,
       title: "Hip Hop Hits",
       description: "Kendrick Lamar, J. Cole, Travis Scott and more",
       image: daily5,
     },
     {
-      id: 5,
+      id: 13,
       title: "Ariana Grande",
       image: shohruh,
       description: "A pop icon known for her powerful voice and hits.",
     },
     {
-      id: 6,
+      id: 14,
       title: "Billie Eilish",
       description: "A genre-defying artist with a unique sound.",
       image: abror,
     },
     {
-      id: 7,
+      id: 15,
       title: "The Weeknd",
       description: "R&B and pop superstar with global hits.",
       image: elyor,
     },
     {
-      id: 8,
+      id: 16,
       title: "Kendrick Lamar",
       description:
         "Renowned rapper and lyricist with social-conscious messages.",
@@ -125,7 +125,7 @@ function Home() {
   const visibleCards1 = seeAllCards1 ? cards1 : cards1.slice(0, 4);
 
   const handleCardClick = (id) => {
-    navigate(`/playlist/${id}`);
+    navigate(`/playlist/${id}`, { state: { cards, cards1 } });
   };
 
   const renderCard = (card) => (
@@ -163,7 +163,10 @@ function Home() {
 
         <div className="flex gap-[24px] mt-6 ">
           <div className="space-y-2">
-            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md mb-2 cursor-pointer">
+            <div
+              className="flex gap-4 items-center  bg-gray-400 bg-opacity-20 w-[420px] rounded-md 
+              cursor-pointer"
+            >
               <img
                 src={cover}
                 alt="Chill Mix"
@@ -171,7 +174,7 @@ function Home() {
               />
               <h2 className="text-white font-medium">Chill Mix</h2>
             </div>
-            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md mb-2 cursor-pointer">
+            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md  cursor-pointer">
               <img
                 src={daily}
                 alt="Daily Mix 1"
@@ -179,7 +182,7 @@ function Home() {
               />
               <h2 className="text-white font-medium">Daily Mix 1</h2>
             </div>
-            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md mb-2 cursor-pointer">
+            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md  cursor-pointer">
               <img
                 src={folk}
                 alt="Folk & Acoustic Mix"
@@ -189,11 +192,11 @@ function Home() {
             </div>
           </div>
           <div className="space-y-2">
-            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md mb-2 cursor-pointer">
+            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md  cursor-pointer">
               <img src={pop} alt="Pop Mix" className="w-[60px] rounded-md" />
               <h2 className="text-white font-medium">Pop Mix</h2>
             </div>
-            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md mb-2 cursor-pointer">
+            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md cursor-pointer">
               <img
                 src={daily5}
                 alt="Daily Mix 5"
@@ -201,7 +204,7 @@ function Home() {
               />
               <h2 className="text-white font-medium">Daily Mix 5</h2>
             </div>
-            <div className="flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md mb-2 cursor-pointer">
+            <div className=" flex gap-4 items-center bg-gray-400 bg-opacity-20 w-[420px] rounded-md  cursor-pointer">
               <img
                 src={daily4}
                 alt="Daily Mix 4"

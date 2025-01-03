@@ -14,7 +14,7 @@ function MainLayout({ children }) {
     <div className="flex h-[100vh]">
       <aside className="fixed left-0 top-0 w-[310px] bg-[#000000] text-white h-full py-[30px] px-[23px] flex-shrink-0">
         <div>
-          <div className="flex items-center gap-6 mt-8 cursor-pointer">
+          <div className="flex items-center gap-6 mt-1 cursor-pointer">
             <button onClick={handleHome}>
               <i className="fa-sharp fa-solid fa-house text-gray-400 text-2xl hover:text-white"></i>
             </button>
@@ -65,14 +65,56 @@ function MainLayout({ children }) {
             </Link>
           </div>
         </div>
+        <div className="mt-10 mb-10">
+          <ul>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#" className="text-gray-400">
+                Chill Mix
+              </a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Insta Hits</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Your Top Songs 2021</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Mellow Songs</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Anime Lofi & Chillhop Music</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">BG Afro “Select” Vibes</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Afro “Select” Vibes</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Happy Hits!</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Deep Focus</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Instrumental Study</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">OST Compilations</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Nostalgia for old souled mill...</a>
+            </li>
+            <li className="mb-2 text-gray-400 hover:underline hover:text-gray-300">
+              <a href="#">Mixed Feelings</a>
+            </li>
+          </ul>
+        </div>
       </aside>
 
-      <main className="flex-grow relative ml-[310px] mr-[310px]">
-  <div className="overflow-auto h-full">
-    {children}
-  </div>
-</main>
-
+      <main className="flex-grow relative ml-[310px] mr-[290px]">
+        <div className="overflow-auto h-full">{children}</div>
+      </main>
 
       <aside className="fixed right-0 top-0 w-[310px] bg-[#000000] text-white h-full py-[30px] px-[23px] flex-shrink-0">
         <div className="flex justify-between">
